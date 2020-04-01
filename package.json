@@ -1,9 +1,9 @@
 {
   "name": "vladivostokbot",
   "version": "0.1.0",
-  "description": "Bot for playing internet radio stations",
+  "description": "Bot for playing internet radio stations on Discord servers",
   "main": "lib/index.js",
-  "repository": "https://github.com/kuskoman/dumbot",
+  "repository": "https://github.com/kuskoman/VladivostokBot",
   "author": "kkm <kubasurdej@gmail.com>",
   "license": "MIT",
   "scripts": {
