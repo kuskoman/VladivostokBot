@@ -10,11 +10,11 @@ Bot has only two commands:
 
 Usage:
 
-**play** args
+**\$play** args
 
 or:
 
-**p** args
+**\$p** args
 
 Description:
 
@@ -28,7 +28,7 @@ anyway, not posting any error message.
 
 Usage:
 
-**leave** or **l**
+**\$leave** or **\$l**
 
 Causes bot to end connection and leave current voice channel on server.
 
