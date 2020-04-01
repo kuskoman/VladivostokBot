@@ -1,7 +1,7 @@
 {
-  "name": "leliwabot",
+  "name": "radiobot",
   "version": "0.1.0",
-  "description": "Bot for the best radio in the universe",
+  "description": "Bot for playing internet radio stations",
   "main": "lib/index.js",
   "repository": "https://github.com/kuskoman/dumbot",
   "author": "kkm <kubasurdej@gmail.com>",
