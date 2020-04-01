@@ -1,5 +1,5 @@
 {
-  "name": "radiobot",
+  "name": "vladivostokbot",
   "version": "0.1.0",
   "description": "Bot for playing internet radio stations",
   "main": "lib/index.js",
