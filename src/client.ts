@@ -16,7 +16,7 @@ client.on("message", async (msg) => {
 
     if (commands.has(command)) {
       const cmdExecutor = commands.get(command);
-      return cmdExecutor({ command, args, rawText: text });
+      return cmdExecutor({ command, args, msg });
     }
 
     msg.channel.send(`Can't recognise command: ${command}`);

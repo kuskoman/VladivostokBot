@@ -1,6 +1,6 @@
-export const commands = new Map<string, CommandExecutor>();
+import { Message } from "discord.js";
 
-export type CommandExecutor = (params: CommandExecuteParams) => any;
+export const commands = new Map<string, CommandExecutor>();
 
 export const registerCommand = (
   aliases: string[],
@@ -12,7 +12,9 @@ export const registerCommand = (
 };
 
 export interface CommandExecuteParams {
-  rawText: string;
+  msg: Message;
   command: string;
   args: string;
 }
+
+export type CommandExecutor = (params: CommandExecuteParams) => any;
