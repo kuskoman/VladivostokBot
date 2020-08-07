@@ -4,7 +4,7 @@ export const commands = new Map<string, CommandExecutor>();
 
 export const registerCommand = (command: Command) => {
   command.aliases.forEach((alias) => {
-    commands[alias] = command.executor;
+    commands.set(alias, command.executor);
   });
 };
 

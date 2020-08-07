@@ -3,6 +3,7 @@ export const validateLink = (link: string) => {
   if (matchExact(linkRegex, link)) {
     return link;
   }
+  return false;
 };
 
 const matchExact = (r: RegExp, str: string) => {

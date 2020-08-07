@@ -1,7 +1,9 @@
 import { Message, VoiceChannel } from "discord.js";
 import logger from "../logger";
 
-export const joinChannel = async (msg: Message): Promise<VoiceChannel> => {
+export const joinChannel = async (
+  msg: Message
+): Promise<VoiceChannel | null> => {
   const channel = msg.member?.voice?.channel;
   if (!channel) {
     msg.channel.send("You must be in a voice channel first");
@@ -30,7 +32,7 @@ export const joinChannel = async (msg: Message): Promise<VoiceChannel> => {
   }
 };
 
-export const leaveChannel = async (msg: Message) => {
+export const leaveChannel = async (msg: Message): Promise<unknown> => {
   if (!msg.guild?.id) {
     return msg.channel.send("Can't find server id.");
   }
@@ -46,9 +48,14 @@ export const leaveChannel = async (msg: Message) => {
 };
 
 export const playRadioStation = async (msg: Message, stationURL: string) => {
-  const serverID = msg.guild.id;
+  const serverID = msg.guild?.id;
+  const connection = msg.guild?.voice?.connection;
 
-  msg.guild.voice.connection
+  if (!connection) {
+    return msg.channel.send(`Can't find voice connection`);
+  }
+
+  connection
     .play(stationURL)
     .on("start", () => {
       logger.info(`Playing ${stationURL} on server ${serverID}`);

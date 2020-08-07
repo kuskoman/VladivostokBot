@@ -16,7 +16,7 @@ const play: Command = {
 
     if (validateLink(args)) {
       msg.channel.send(`Playing ${args}: recognised link.`);
-      return playRadioStation(msg, predefinedStation);
+      return playRadioStation(msg, args);
     }
 
     msg.channel.send(
