@@ -2,12 +2,9 @@ import { Message } from "discord.js";
 
 export const commands = new Map<string, CommandExecutor>();
 
-export const registerCommand = (
-  aliases: string[],
-  executor: CommandExecutor
-) => {
-  aliases.forEach((alias) => {
-    commands[alias] = executor;
+export const registerCommand = (command: Command) => {
+  command.aliases.forEach((alias) => {
+    commands[alias] = command.executor;
   });
 };
 
