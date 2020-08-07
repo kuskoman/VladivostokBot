@@ -18,3 +18,8 @@ export interface CommandExecuteParams {
 }
 
 export type CommandExecutor = (params: CommandExecuteParams) => any;
+
+export interface Command {
+  aliases: string[];
+  executor: CommandExecutor;
+}
