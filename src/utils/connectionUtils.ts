@@ -44,3 +44,20 @@ export const leaveChannel = async (msg: Message) => {
   voiceChannel.leave();
   logger.info(`Left channel ${msg.channel.id}`);
 };
+
+export const playRadioStation = async (msg: Message, stationURL: string) => {
+  const serverID = msg.guild.id;
+
+  msg.guild.voice.connection
+    .play(stationURL)
+    .on("start", () => {
+      logger.info(`Playing ${stationURL} on server ${serverID}`);
+    })
+    .on("error", () => {
+      const errMsg = `Error while playing ${stationURL})`;
+      logger.info(errMsg);
+    })
+    .on("close", () => {
+      logger.debug(`Stopped playing ${stationURL} on server ${serverID}`);
+    });
+};

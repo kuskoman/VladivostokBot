@@ -1,9 +1,8 @@
-import { CommandExecuteParams } from "../commandHandler";
 import { joinChannel } from "../utils/connectionUtils";
 
 const join = {
   aliases: ["join", "j"],
-  executor: async ({ msg }: CommandExecuteParams) => {
+  executor: async ({ msg }) => {
     joinChannel(msg);
   },
 };
