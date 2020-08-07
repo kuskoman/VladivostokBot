@@ -16,7 +16,7 @@ const parseStationsObject = (stationsObject: object): void => {
     if (stations.has(key)) {
       logger.warn(`Overwriting ${key} with ${value}.`);
     }
-    stations[key] = value;
+    stations.set(key, value);
   }
 };
 
