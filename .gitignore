@@ -116,3 +116,7 @@ dist
 
 # environment variables
 .env
+
+# custom radio stations
+stations/**
+!stations/default.json
