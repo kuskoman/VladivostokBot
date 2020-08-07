@@ -30,3 +30,8 @@ click on your bot, click on `OAauth2` in the left `Settings` menu, then generate
 You can give it all permissions (by clicking `bot`, then `Administrator` in scopes section),
 or limit it to permissions neccessary for reading and sending messages and using voice activity.
 After doing it you can copy generated link and click it to add the bot to your server.
+
+### Deployment to Kubernetes
+
+I have no idea why would you want to deploy this bot to Kubernetes cluster, however if you want
+to you can use [example deployment file](kubernetes/example-deployment.yml).
