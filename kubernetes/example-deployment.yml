@@ -21,7 +21,7 @@ spec:
           imagePullPolicy: "IfNotPresent"
           envFrom:
             - configMapRef:
-              name: vladivostokbot-config
+                name: vladivostokbot-config
 ---
 apiVersion: v1
 kind: ConfigMap
