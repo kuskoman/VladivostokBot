@@ -1,5 +1,7 @@
 # Vladivostok Bot
 
+![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/kuskoman/vladivostokbot)
+
 Vladivostok Bot is a very simple Discord bot used for playing internet radios.
 
 ## Usage
