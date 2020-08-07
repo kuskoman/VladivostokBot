@@ -5,7 +5,7 @@ const client = new Client();
 const prefix = process.env.prefix || "$";
 
 client.on("ready", () => {
-  console.log(`Bot logged in as ${client.user.tag}`);
+  console.log(`Bot logged in as ${client.user?.tag}`);
 });
 
 client.on("message", async (msg) => {
@@ -14,8 +14,8 @@ client.on("message", async (msg) => {
     const command = text.split(" ")[0].toLowerCase();
     const args = text.slice(command.length).trim();
 
-    if (commands.has(command)) {
-      const cmdExecutor = commands.get(command);
+    const cmdExecutor = commands.get(command);
+    if (cmdExecutor) {
       return cmdExecutor({ command, args, msg });
     }
 
