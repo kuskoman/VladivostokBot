@@ -1,6 +1,6 @@
 {
   "name": "vladivostokbot",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Bot for playing internet radio stations on Discord servers",
   "main": "dist/index.js",
   "repository": "https://github.com/kuskoman/VladivostokBot",
