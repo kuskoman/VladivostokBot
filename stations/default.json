@@ -35,5 +35,6 @@
   "fajnradio": "http://ice.abradio.cz:8000/fajn128.mp3",
   "ceskadvojka": "http://icecast6.play.cz/cro2-128.mp3",
   "917xfm": "http://s6-webradio.rockantenne.hamburg/917xfm/stream/mp3",
-  "bayern1": "http://br-edge-2001.dus-lg.cdn.addradio.net/br/br1/schwaben/mp3/128/stream.mp3"
+  "bayern1": "http://br-edge-2001.dus-lg.cdn.addradio.net/br/br1/schwaben/mp3/128/stream.mp3",
+  "nowyswiat": "https://n05a-eu.rcs.revma.com/ypqt40u0x1zuv?rj-ttl=5&rj-tok=AAABc9R3tqsA_pyGghw_ujtGig"
 }
