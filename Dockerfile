@@ -1,4 +1,4 @@
-FROM node:14.15.0-alpine3.12 AS build
+FROM node:14.15.1-alpine3.12 AS build
 
 COPY package.json /app/package.json
 COPY yarn.lock /app/yarn.lock
