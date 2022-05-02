@@ -1,6 +1,6 @@
 {
-  "leliwa": "http://stream2.nadaje.com:8054/;stream/1",
-  "russkoe": "https://rusradio.hostingradio.ru/rusradio96.aacp",
+  "leliwa": "https://streaming.g-news.pl:8050/leliwa",
+  "fest": "http://primary.moodyradiostream.org/radiofest",
   "los40principales": "https://20863.live.streamtheworld.com/LOS40AAC.aac",
   "kissfmes": "https://kissfm.kissfmradio.cires21.com/kissfm.mp3",
   "latina104": "https://radio.dominiserver.com/proxy/latina104?mp=/stream",
