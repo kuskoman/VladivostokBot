@@ -1,25 +1,32 @@
-FROM node:14.15.1-alpine3.12 AS build
+FROM node:17.7-alpine3.15 as base
 
-COPY package.json /app/package.json
-COPY yarn.lock /app/yarn.lock
-WORKDIR /app
-RUN [ "yarn", "install" ]
-COPY . /app
-RUN [ "yarn", "build" ]
+ONBUILD WORKDIR /app
 
-FROM node:14.15.0-alpine3.12 AS final
+ONBUILD COPY package.json package.json
+ONBUILD COPY yarn.lock yarn.lock
 
-WORKDIR /app
-ENV NODE_ENV production
 
-RUN apk add  --no-cache ffmpeg
+FROM base as modules
 
-COPY --from=build /app/package.json /app
-COPY --from=build /app/yarn.lock /app
-COPY --from=build /app/dist/ /app/dist
-COPY --from=build /app/stations/ /app/stations
-COPY --from=build /app/node_modules /app/node_modules
+RUN yarn install --production=true --frozen-lockfile
+
+
+FROM base as build
+
+RUN yarn install --frozen-lockfile
+
+COPY . .
+
+RUN yarn build
+RUN rm dist/tsconfig.build.tsbuildinfo
+
+
+FROM base as release
+
+COPY --from=build /app/dist /app/dist
+COPY --from=modules /app/node_modules /app/node_modules
 
 USER node
 
-ENTRYPOINT [ "node", "dist" ]
+EXPOSE 3000
+CMD [ "yarn", "start:prod" ]

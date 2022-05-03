@@ -1,5 +1,59 @@
-node_modules
-.git
-dist
-.vscode
-.env
+# compiled output
+/dist
+/node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS
+.DS_Store
+
+# Tests
+/coverage
+/.nyc_output
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Test files
+test
+*.spec.ts
+*.spec.js
+*.test.ts
+*.test.js
+*.e2e-spec.ts
+*.e2e-test.js
+jest.*config.ts
+jest.*config.js
+
+# Configuration files
+.dockerignore
+.eslintrc.js
+.gitignore
+.prettierrc
+Dockerfile
+
+# Documentation
+docs
+README.md
+README
+*.md
